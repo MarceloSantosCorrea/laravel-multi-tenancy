@@ -3,7 +3,7 @@
 
 /**
  * A helper file for Laravel 5, to provide autocomplete information to your IDE
- * Generated for Laravel 5.7.27 on 2019-02-20 15:06:33.
+ * Generated for Laravel 5.7.27 on 2019-02-20 20:45:37.
  *
  * This file should not be included in your code, only analyzed by your IDE!
  *
@@ -14626,6 +14626,60 @@ namespace Collective\Html {
  
 }
 
+namespace MaximGestor\Tenants { 
+
+    /**
+     * 
+     *
+     */ 
+    class TenantFacade {
+        
+        /**
+         * 
+         *
+         * @return mixed 
+         * @static 
+         */ 
+        public static function getTenant()
+        {
+            return \MaximGestor\Tenants\TenantManager::getTenant();
+        }
+        
+        /**
+         * 
+         *
+         * @param mixed $tenant
+         * @static 
+         */ 
+        public static function setTenant($tenant)
+        {
+            return \MaximGestor\Tenants\TenantManager::setTenant($tenant);
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function disableTenant()
+        {
+            return \MaximGestor\Tenants\TenantManager::disableTenant();
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function enableTenant()
+        {
+            return \MaximGestor\Tenants\TenantManager::enableTenant();
+        }
+         
+    }
+ 
+}
+
 
 namespace  { 
 
@@ -17061,6 +17115,8 @@ namespace  {
     class Form extends \Collective\Html\FormFacade {}
 
     class Html extends \Collective\Html\HtmlFacade {}
+
+    class Tenant extends \MaximGestor\Tenants\TenantFacade {}
  
 }
 

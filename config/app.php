@@ -190,7 +190,6 @@ return [
     */
 
     'aliases' => [
-
         'App'          => Illuminate\Support\Facades\App::class,
         'Artisan'      => Illuminate\Support\Facades\Artisan::class,
         'Auth'         => Illuminate\Support\Facades\Auth::class,
@@ -227,6 +226,7 @@ return [
         'Theme'        => Shipu\Themevel\Facades\Theme::class,
         'Form'         => Collective\Html\FormFacade::class,
         'Html'         => Collective\Html\HtmlFacade::class,
+        'Tenant'       => \MaximGestor\Tenants\TenantFacade::class,
     ],
 
 ];
